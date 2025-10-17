@@ -1,0 +1,51 @@
+# ===============================
+# Java & Maven Automation Project
+# ===============================
+
+# Compiled class files
+*.class
+
+# Log files
+*.log
+
+# BlueJ files
+*.ctxt
+
+# Mobile tooling
+*.apk
+*.ap_
+
+# Maven target directory
+target/
+surefire-reports/
+extent-reports/
+test-output/
+
+# Cucumber reports
+reports/
+cucumber-reports/
+allure-results/
+allure-report/
+
+# IntelliJ IDEA / Eclipse / VSCode config
+.idea/
+*.iml
+.classpath
+.project
+.settings/
+.vscode/
+
+# Temporary files
+.DS_Store
+Thumbs.db
+
+# Generated test data
+src/test/resources/testdata/*.json
+
+# OS generated files
+ehthumbs.db
+Icon?
+desktop.ini
+
+# Environment or secrets
+*.env
