@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="7" passed="7" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2025-10-16T19:36:16 SAST" name="Cucumber BDD Suite" finished-at="2025-10-16T19:40:48 SAST" duration-ms="271191">
+    <groups>
+      <group name="cucumber">
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.TestRunner@2d3379b4]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+      </group> <!-- cucumber -->
+    </groups>
+    <test started-at="2025-10-16T19:36:16 SAST" name="Cucumber Tests" finished-at="2025-10-16T19:40:48 SAST" duration-ms="271191">
+      <class name="testrunner.TestRunner">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:testrunner.TestRunner@2d3379b4]" started-at="2025-10-16T19:36:16 SAST" name="setUpClass" finished-at="2025-10-16T19:36:21 SAST" duration-ms="4181" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@314e240c]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpClass -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.TestRunner@2d3379b4]" started-at="2025-10-16T19:36:21 SAST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-10-16T19:37:55 SAST" duration-ms="94299" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Successful Registration with Valid Details"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Register User Functionality"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.TestRunner@2d3379b4]" started-at="2025-10-16T19:37:55 SAST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-10-16T19:38:29 SAST" duration-ms="34006" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Registration with Already Registered Email"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Register User Functionality"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.TestRunner@2d3379b4]" started-at="2025-10-16T19:38:29 SAST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-10-16T19:38:57 SAST" duration-ms="27502" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Registration with Missing Mandatory Fields"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Register User Functionality"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.TestRunner@2d3379b4]" started-at="2025-10-16T19:38:57 SAST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-10-16T19:39:21 SAST" duration-ms="24550" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Registration with Invalid Email Format"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Register User Functionality"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.TestRunner@2d3379b4]" started-at="2025-10-16T19:39:21 SAST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-10-16T19:39:50 SAST" duration-ms="28642" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Registration without Accepting Privacy Policy"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Register User Functionality"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.TestRunner@2d3379b4]" started-at="2025-10-16T19:39:50 SAST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-10-16T19:40:18 SAST" duration-ms="28071" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Registration with Weak Password"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Register User Functionality"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.TestRunner@2d3379b4]" started-at="2025-10-16T19:40:18 SAST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-10-16T19:40:47 SAST" duration-ms="29396" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Registration with Mismatched Password Confirmation"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Register User Functionality"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:testrunner.TestRunner@2d3379b4]" started-at="2025-10-16T19:40:47 SAST" name="tearDownClass" finished-at="2025-10-16T19:40:48 SAST" duration-ms="252" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownClass -->
+      </class> <!-- testrunner.TestRunner -->
+    </test> <!-- Cucumber Tests -->
+  </suite> <!-- Cucumber BDD Suite -->
+</testng-results>
