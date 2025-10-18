@@ -1,4 +1,12 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 274.3 s -- in TestSuite
+Tests run: 11, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 312.7 s <<< FAILURE! -- in TestSuite
+testrunner.TestRunner.runScenario["Login with Empty Fields", "Login User Functionality"](4) -- Time elapsed: 10.00 s <<< FAILURE!
+java.lang.AssertionError: Invalid login warning is not displayed. expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at stepdefinition.LoginSteps.user_should_see_error_messages_indicating_that_both_fields_are_required(LoginSteps.java:87)
+	at ✽.User should see error messages indicating that both fields are required(file:///C:/Users/USER/eclipse-workspace/Lambda-behavior-driven-development-framework/src/test/resources/features/LoginUser.feature:35)
+

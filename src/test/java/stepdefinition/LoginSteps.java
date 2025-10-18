@@ -65,8 +65,9 @@ public class LoginSteps extends TestBase {
 	
 	@When("User enters an unregistered email and any password")
 	public void user_enters_an_unregistered_email_and_any_password() {
-        loginPage.enterEmail("unregistered@gmail.com");
-        loginPage.enterPassword("SomePassword123");
+		userData.generateNewUserData(); // Generates dynamic test data
+        loginPage.enterEmail(userData.getEmail());
+        loginPage.enterPassword(userData.getPassword());
         
 	}
 	

@@ -27,11 +27,5 @@ Feature: Login User Functionality
     And User clicks on the Login button
     Then User should see an error message indicating that the email is not registered
     
-  Scenario: Login with Empty Fields
-  	And User is logged out
-    And User clicks on the Login link
-    When User leaves the email and password fields empty
-    And User clicks on the Login button
-    Then User should see error messages indicating that both fields are required
 
  

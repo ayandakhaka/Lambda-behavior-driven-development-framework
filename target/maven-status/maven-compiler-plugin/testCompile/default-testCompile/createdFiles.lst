@@ -4,6 +4,7 @@ utils\CustomListener.class
 utils\RetryAnalyzer.class
 utils\TestDataManager.class
 utils\ConfigReader.class
+stepdefinition\LoginSteps.class
 stepdefinition\RegistrationSteps.class
 utils\TestBase.class
 Pages\RegisterPage.class

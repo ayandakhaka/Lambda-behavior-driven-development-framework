@@ -184,6 +184,8 @@ public class TestBase {
             customWait.until(ExpectedConditions.visibilityOf(element));
 
             String actualText = element.getText().trim();
+            
+            System.out.println(actualText.trim() + " = " + expectedText.trim());
 
             if (actualText.equals(expectedText.trim())) {
                 System.out.println("✅ Text validation passed for " + description + ": " + actualText);

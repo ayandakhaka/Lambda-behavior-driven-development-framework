@@ -1,0 +1,59 @@
+name: LambdaTest BDD CI/CD Pipeline
+
+# Trigger pipeline on push to main or pull requests
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        java-version: [21]
+
+    steps:
+      # 1. Checkout the repository
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      # 2. Setup Java
+      - name: Set up JDK ${{ matrix.java-version }}
+        uses: actions/setup-java@v3
+        with:
+          distribution: 'temurin'
+          java-version: ${{ matrix.java-version }}
+
+      # 3. Cache Maven dependencies
+      - name: Cache Maven packages
+        uses: actions/cache@v3
+        with:
+          path: ~/.m2
+          key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
+          restore-keys: |
+            ${{ runner.os }}-maven-
+
+      # 4. Install dependencies and build project
+      - name: Build with Maven
+        run: mvn clean install -B
+
+      # 5. Run Cucumber tests
+      - name: Run Tests
+        run: mvn test -B
+
+      # 6. Upload test reports (ExtentReports) as artifacts
+      - name: Upload ExtentReports
+        uses: actions/upload-artifact@v3
+        with:
+          name: ExtentReports
+          path: target/ExtentReport.html
+
+      # 7. Upload screenshots as artifacts
+      - name: Upload Screenshots
+        uses: actions/upload-artifact@v3
+        with:
+          name: Screenshots
+          path: target/screenshots/

@@ -2,6 +2,7 @@ C:\Users\USER\eclipse-workspace\Lambda-behavior-driven-development-framework\src
 C:\Users\USER\eclipse-workspace\Lambda-behavior-driven-development-framework\src\test\java\Pages\LambdaTestHomePage.java
 C:\Users\USER\eclipse-workspace\Lambda-behavior-driven-development-framework\src\test\java\Pages\LoginPage.java
 C:\Users\USER\eclipse-workspace\Lambda-behavior-driven-development-framework\src\test\java\Pages\RegisterPage.java
+C:\Users\USER\eclipse-workspace\Lambda-behavior-driven-development-framework\src\test\java\stepdefinition\LoginSteps.java
 C:\Users\USER\eclipse-workspace\Lambda-behavior-driven-development-framework\src\test\java\stepdefinition\RegistrationSteps.java
 C:\Users\USER\eclipse-workspace\Lambda-behavior-driven-development-framework\src\test\java\testrunner\TestRunner.java
 C:\Users\USER\eclipse-workspace\Lambda-behavior-driven-development-framework\src\test\java\utils\ConfigReader.java
