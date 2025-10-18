@@ -23,58 +23,42 @@ public class DriverManager {
 
     public static void initializeDriver() {
         String browser = System.getProperty("browser", "edge").toLowerCase();
+        boolean isCI = isCI();
 
         try {
             switch (browser) {
                 case "chrome":
-                    setupChromeDriver();
-                    driver = new ChromeDriver(new ChromeOptions());
+                    WebDriverManager.chromedriver().setup();
+                    ChromeOptions chromeOptions = new ChromeOptions();
+                    if (isCI) {
+                        chromeOptions.addArguments("--headless", "--disable-gpu", "--window-size=1920,1080");
+                    }
+                    driver = new ChromeDriver(chromeOptions);
                     break;
+
                 case "firefox":
-                    setupFirefoxDriver();
-                    driver = new FirefoxDriver(new FirefoxOptions());
+                    WebDriverManager.firefoxdriver().setup();
+                    FirefoxOptions firefoxOptions = new FirefoxOptions();
+                    if (isCI) {
+                        firefoxOptions.addArguments("--headless", "--disable-gpu", "--window-size=1920,1080");
+                    }
+                    driver = new FirefoxDriver(firefoxOptions);
                     break;
+
                 case "edge":
                 default:
-                    setupEdgeDriver();
-                    driver = new EdgeDriver(new EdgeOptions());
+                    WebDriverManager.edgedriver().setup();
+                    EdgeOptions edgeOptions = new EdgeOptions();
+                    if (isCI) {
+                        edgeOptions.addArguments("--headless=new", "--disable-gpu", "--window-size=1920,1080");
+                    }
+                    driver = new EdgeDriver(edgeOptions);
                     break;
             }
+
             driver.manage().window().maximize();
         } catch (Exception e) {
             throw new RuntimeException("Failed to initialize WebDriver: " + e.getMessage(), e);
-        }
-    }
-
-    private static void setupChromeDriver() {
-        try {
-            WebDriverManager.chromedriver()
-                // Optional: set proxy if needed
-                //.proxy("proxy.host:8080")
-                .setup();
-        } catch (Exception e) {
-            // fallback to manually downloaded driver
-            System.setProperty("webdriver.chrome.driver", "C:/drivers/chromedriver.exe");
-        }
-    }
-
-    private static void setupFirefoxDriver() {
-        try {
-            WebDriverManager.firefoxdriver()
-                //.proxy("proxy.host:8080")
-                .setup();
-        } catch (Exception e) {
-            System.setProperty("webdriver.gecko.driver", "drivers/geckodriver.exe");
-        }
-    }
-
-    private static void setupEdgeDriver() {
-        try {
-            WebDriverManager.edgedriver()
-                //.proxy("proxy.host:8080")
-                .setup();
-        } catch (Exception e) {
-            System.setProperty("webdriver.edge.driver", "drivers/msedgedriver.exe");
         }
     }
 
@@ -89,7 +73,15 @@ public class DriverManager {
         try {
             getDriver().get(url);
         } catch (Exception e) {
-            throw new RuntimeException("Failed to launch URL : " + url, e);
+            throw new RuntimeException("Failed to launch URL: " + url, e);
         }
+    }
+
+    /**
+     * Detect if running in a CI environment (GitHub Actions, Jenkins, etc.)
+     */
+    private static boolean isCI() {
+        String ciEnv = System.getenv("CI");
+        return ciEnv != null && ciEnv.equalsIgnoreCase("true");
     }
 }

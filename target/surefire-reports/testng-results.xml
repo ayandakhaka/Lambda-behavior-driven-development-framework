@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="11" passed="10" failed="1" skipped="0">
+<testng-results ignored="0" total="10" passed="10" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-10-18T08:23:48 SAST" name="Cucumber BDD Suite" finished-at="2025-10-18T08:28:58 SAST" duration-ms="310226">
+  <suite started-at="2025-10-18T09:33:08 SAST" name="Cucumber BDD Suite" finished-at="2025-10-18T09:37:51 SAST" duration-ms="282489">
     <groups>
       <group name="cucumber">
         <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.TestRunner@2d3379b4]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2025-10-18T08:23:48 SAST" name="Cucumber Tests" finished-at="2025-10-18T08:28:58 SAST" duration-ms="310226">
+    <test started-at="2025-10-18T09:33:08 SAST" name="Cucumber Tests" finished-at="2025-10-18T09:37:51 SAST" duration-ms="282489">
       <class name="testrunner.TestRunner">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:testrunner.TestRunner@2d3379b4]" started-at="2025-10-18T08:23:48 SAST" name="setUpClass" finished-at="2025-10-18T08:23:50 SAST" duration-ms="2221" status="PASS">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:testrunner.TestRunner@2d3379b4]" started-at="2025-10-18T09:33:08 SAST" name="setUpClass" finished-at="2025-10-18T09:33:11 SAST" duration-ms="3277" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@4b76a0f4]]>
+                <![CDATA[org.testng.TestRunner@5f571d96]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.TestRunner@2d3379b4]" started-at="2025-10-18T08:23:50 SAST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-10-18T08:24:40 SAST" duration-ms="49783" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.TestRunner@2d3379b4]" started-at="2025-10-18T09:33:11 SAST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-10-18T09:34:25 SAST" duration-ms="73058" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -37,7 +37,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.TestRunner@2d3379b4]" started-at="2025-10-18T08:24:40 SAST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-10-18T08:24:54 SAST" duration-ms="13544" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.TestRunner@2d3379b4]" started-at="2025-10-18T09:34:25 SAST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-10-18T09:34:50 SAST" duration-ms="24976" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -53,7 +53,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.TestRunner@2d3379b4]" started-at="2025-10-18T08:24:54 SAST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-10-18T08:25:05 SAST" duration-ms="11376" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.TestRunner@2d3379b4]" started-at="2025-10-18T09:34:50 SAST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-10-18T09:35:04 SAST" duration-ms="14130" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -69,37 +69,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.TestRunner@2d3379b4]" started-at="2025-10-18T08:25:05 SAST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-10-18T08:25:15 SAST" duration-ms="9880" status="FAIL">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Login with Empty Fields"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Login User Functionality"]]>
-              </value>
-            </param>
-          </params>
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[Invalid login warning is not displayed. expected [true] but found [false]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: Invalid login warning is not displayed. expected [true] but found [false]
-at org.testng.Assert.fail(Assert.java:111)
-at org.testng.Assert.failNotEquals(Assert.java:1578)
-at org.testng.Assert.assertTrue(Assert.java:57)
-at stepdefinition.LoginSteps.user_should_see_error_messages_indicating_that_both_fields_are_required(LoginSteps.java:87)
-at ✽.User should see error messages indicating that both fields are required(file:///C:/Users/USER/eclipse-workspace/Lambda-behavior-driven-development-framework/src/test/resources/features/LoginUser.feature:35)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.TestRunner@2d3379b4]" started-at="2025-10-18T08:25:15 SAST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-10-18T08:25:36 SAST" duration-ms="20986" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.TestRunner@2d3379b4]" started-at="2025-10-18T09:35:04 SAST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-10-18T09:35:35 SAST" duration-ms="30840" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -115,7 +85,7 @@ at ✽.User should see error messages indicating that both fields are required(f
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.TestRunner@2d3379b4]" started-at="2025-10-18T08:25:36 SAST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-10-18T08:25:54 SAST" duration-ms="18352" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.TestRunner@2d3379b4]" started-at="2025-10-18T09:35:35 SAST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-10-18T09:36:03 SAST" duration-ms="28058" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -131,7 +101,7 @@ at ✽.User should see error messages indicating that both fields are required(f
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.TestRunner@2d3379b4]" started-at="2025-10-18T08:25:54 SAST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-10-18T08:26:12 SAST" duration-ms="17686" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.TestRunner@2d3379b4]" started-at="2025-10-18T09:36:03 SAST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-10-18T09:36:23 SAST" duration-ms="20357" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -147,7 +117,7 @@ at ✽.User should see error messages indicating that both fields are required(f
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.TestRunner@2d3379b4]" started-at="2025-10-18T08:26:12 SAST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-10-18T08:26:30 SAST" duration-ms="18517" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.TestRunner@2d3379b4]" started-at="2025-10-18T09:36:23 SAST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-10-18T09:36:45 SAST" duration-ms="22130" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -163,7 +133,7 @@ at ✽.User should see error messages indicating that both fields are required(f
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.TestRunner@2d3379b4]" started-at="2025-10-18T08:26:30 SAST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-10-18T08:27:05 SAST" duration-ms="34371" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.TestRunner@2d3379b4]" started-at="2025-10-18T09:36:45 SAST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-10-18T09:37:06 SAST" duration-ms="20438" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -179,7 +149,7 @@ at ✽.User should see error messages indicating that both fields are required(f
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.TestRunner@2d3379b4]" started-at="2025-10-18T08:27:05 SAST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-10-18T08:28:26 SAST" duration-ms="80883" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.TestRunner@2d3379b4]" started-at="2025-10-18T09:37:06 SAST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-10-18T09:37:26 SAST" duration-ms="20618" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -195,7 +165,7 @@ at ✽.User should see error messages indicating that both fields are required(f
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.TestRunner@2d3379b4]" started-at="2025-10-18T08:28:26 SAST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-10-18T08:28:56 SAST" duration-ms="30121" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.TestRunner@2d3379b4]" started-at="2025-10-18T09:37:26 SAST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-10-18T09:37:47 SAST" duration-ms="21133" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -211,7 +181,7 @@ at ✽.User should see error messages indicating that both fields are required(f
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:testrunner.TestRunner@2d3379b4]" started-at="2025-10-18T08:28:56 SAST" name="tearDownClass" finished-at="2025-10-18T08:28:58 SAST" duration-ms="2292" status="PASS">
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:testrunner.TestRunner@2d3379b4]" started-at="2025-10-18T09:37:47 SAST" name="tearDownClass" finished-at="2025-10-18T09:37:51 SAST" duration-ms="3229" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->
