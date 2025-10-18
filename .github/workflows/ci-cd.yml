@@ -18,7 +18,7 @@ jobs:
     steps:
       # 1. Checkout the repository
       - name: Checkout Repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       # 2. Setup Java
       - name: Set up JDK ${{ matrix.java-version }}
@@ -46,14 +46,14 @@ jobs:
 
       # 6. Upload test reports (ExtentReports) as artifacts
       - name: Upload ExtentReports
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: ExtentReports
           path: target/ExtentReport.html
 
       # 7. Upload screenshots as artifacts
       - name: Upload Screenshots
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: Screenshots
           path: target/screenshots/
