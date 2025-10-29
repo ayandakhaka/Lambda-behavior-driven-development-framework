@@ -2,12 +2,12 @@ package stepdefinition;
 
 import java.util.List;
 
-import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 
 import Pages.LambdaTestHomePage;
 import Pages.RegisterPage;
+import io.cucumber.java.Before;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -22,13 +22,14 @@ public class RegistrationSteps extends TestBase {
 	private LambdaTestHomePage lambdaTestHomePage;
 	private RegisterPage registerPage;
 
-	// Public no-arg constructor required by Cucumber
-	public RegistrationSteps() {
-		super(DriverManager.getDriver());
+	@Before
+	public void setUp() {
+		DriverManager.initializeDriver();
 		this.driver = DriverManager.getDriver();
 		this.userData = TestDataManager.getInstance();
-		this.lambdaTestHomePage = new LambdaTestHomePage(driver);
-		this.registerPage = new RegisterPage(driver);
+		this.userData.loadUserData();
+		this.lambdaTestHomePage = new LambdaTestHomePage();
+		this.registerPage = new RegisterPage();
 	}
 
 	// ... all your step methods here ...
@@ -42,7 +43,7 @@ public class RegistrationSteps extends TestBase {
 
 	@When("User hovers over the My Account menu")
 	public void user_hovers_over_the_my_account_menu() {
-		lambdaTestHomePage.clickMyAccountMenu(); // Refactored method does proper hover
+		lambdaTestHomePage.hoverOverMyAccountMenu(); // Refactored method does proper hover
 	}
 
 	@When("User clicks on the Register link")
@@ -78,27 +79,22 @@ public class RegistrationSteps extends TestBase {
 	public void user_should_see_a_confirmation_message_indicating_successful_registration() {
 		Assert.assertTrue(registerPage.isSuccessMessageDisplayed(),
 				"❌ Failed to verify register success message");
-		TestDataManager.getInstance().saveUserData(); // Save user data after successful registration
 	}
 
 	@When("User refresh the page")
 	public void user_refresh_the_page() {
 		driver.navigate().refresh();
 	}
-	
+
 	@Given("User is logged out")
 	public void user_is_logged_out() {
-	    try {
-	        if (lambdaTestHomePage.isUserLoggedIn()) {
-	        	registerPage.clickLogout();  // only click if visible
-	            System.out.println("✅ Clicked logout link");
-	        } else {
-	            System.out.println("ℹ️ User is not logged in. No logout needed.");
-	        }
-	    } catch (NoSuchElementException e) {
-	        System.out.println("ℹ️ Logout link not found, user is already logged out");
-	    }
+		try {
+			registerPage.clickLogout();
+		} catch (Exception e) {
+			System.out.println("User is not logged in. No logout needed.");
+		}
 	}
+
 
 	// ---------------------- Scenario: Registration with Already Registered Email ----------------------
 	@When("User enters all the mandatory fields with an already registered email")

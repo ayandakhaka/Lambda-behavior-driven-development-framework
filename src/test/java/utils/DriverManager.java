@@ -22,41 +22,50 @@ public class DriverManager {
     }
 
     public static void initializeDriver() {
-        String browser = System.getProperty("browser", "edge").toLowerCase();
-        boolean isCI = isCI();
+        String browser = System.getProperty("browser", "chrome-headless").toLowerCase();
 
         try {
             switch (browser) {
                 case "chrome":
+                case "chrome-headless":
                     WebDriverManager.chromedriver().setup();
                     ChromeOptions chromeOptions = new ChromeOptions();
-                    if (isCI) {
-                        chromeOptions.addArguments("--headless", "--disable-gpu", "--window-size=1920,1080");
+                    if (browser.equals("chrome-headless")) {
+                        chromeOptions.addArguments("--headless=new");
+                        chromeOptions.addArguments("--disable-gpu");
+                        chromeOptions.addArguments("--no-sandbox");
+                        chromeOptions.addArguments("--window-size=1920,1080");
                     }
                     driver = new ChromeDriver(chromeOptions);
                     break;
 
                 case "firefox":
+                case "firefox-headless":
                     WebDriverManager.firefoxdriver().setup();
                     FirefoxOptions firefoxOptions = new FirefoxOptions();
-                    if (isCI) {
-                        firefoxOptions.addArguments("--headless", "--disable-gpu", "--window-size=1920,1080");
+                    if (browser.equals("firefox-headless")) {
+                        firefoxOptions.addArguments("--headless");
+                        firefoxOptions.addArguments("--window-size=1920,1080");
                     }
                     driver = new FirefoxDriver(firefoxOptions);
                     break;
 
                 case "edge":
-                default:
-                    WebDriverManager.edgedriver().setup();
+                case "edge-headless":
+                    WebDriverManager.edgedriver().clearResolutionCache().setup();
                     EdgeOptions edgeOptions = new EdgeOptions();
-                    if (isCI) {
-                        edgeOptions.addArguments("--headless=new", "--disable-gpu", "--window-size=1920,1080");
+                    if (browser.equals("headless")) {
+                        edgeOptions.addArguments("--headless=new", "--no-sandbox", "--disable-dev-shm-usage");
                     }
                     driver = new EdgeDriver(edgeOptions);
                     break;
+
+                default:
+                    throw new RuntimeException("Unsupported browser: " + browser);
             }
 
             driver.manage().window().maximize();
+
         } catch (Exception e) {
             throw new RuntimeException("Failed to initialize WebDriver: " + e.getMessage(), e);
         }
@@ -75,13 +84,5 @@ public class DriverManager {
         } catch (Exception e) {
             throw new RuntimeException("Failed to launch URL: " + url, e);
         }
-    }
-
-    /**
-     * Detect if running in a CI environment (GitHub Actions, Jenkins, etc.)
-     */
-    private static boolean isCI() {
-        String ciEnv = System.getenv("CI");
-        return ciEnv != null && ciEnv.equalsIgnoreCase("true");
     }
 }

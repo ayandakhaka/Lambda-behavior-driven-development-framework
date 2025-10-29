@@ -12,8 +12,8 @@ public class TestBase {
     private WebDriverWait wait;
     private Actions actions;
 
-    public TestBase(WebDriver driver) {
-        this.driver = driver;
+    public TestBase() {
+        this.driver = DriverManager.getDriver();
         this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         this.actions = new Actions(driver);
     }

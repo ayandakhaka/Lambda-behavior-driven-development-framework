@@ -6,28 +6,28 @@ import org.testng.Assert;
 import Pages.LambdaTestHomePage;
 import Pages.LoginPage;
 import Pages.RegisterPage;
+import io.cucumber.java.Before;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import utils.DriverManager;
 import utils.TestBase;
 import utils.TestDataManager;
 
-public class LoginSteps extends TestBase {
+public class LoginSteps {
 	
-	private WebDriver driver;
+	//private WebDriver driver;
 	private TestDataManager userData;
 	private LambdaTestHomePage lambdaTestHomePage;
 	private LoginPage loginPage;
 	
-
-	// Public no-arg constructor required by Cucumber
-	public LoginSteps() {
-		super(DriverManager.getDriver());
-		this.driver = DriverManager.getDriver();
-		this.userData = TestDataManager.getInstance();
-		this.userData.loadUserData();
-		this.lambdaTestHomePage = new LambdaTestHomePage(driver);
-		this.loginPage = new LoginPage(driver);
+	@Before
+	public void setUp() {
+		DriverManager.initializeDriver();
+		//this.driver = DriverManager.getDriver();
+		userData = TestDataManager.getInstance();
+		userData.loadUserData();
+		lambdaTestHomePage = new LambdaTestHomePage();
+		loginPage = new LoginPage();
 	}
 	
 	@When("User clicks on the Login link")

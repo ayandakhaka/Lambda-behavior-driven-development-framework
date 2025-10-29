@@ -5,15 +5,21 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
+import utils.DriverManager;
 import utils.TestBase;
 
 public class LoginPage {
 
+	//private WebDriverWait wait;
+	private WebDriver driver;
 	private TestBase testBase;
 	
-	public LoginPage(WebDriver driver) {
-		testBase = new TestBase(driver);
+	public LoginPage() {
+		driver = DriverManager.getDriver();
+		testBase = new TestBase();
+		//wait = new WebDriverWait(DriverManager.getDriver(), java.time.Duration.ofSeconds(10));
 		PageFactory.initElements(driver, this);
 	}
 	

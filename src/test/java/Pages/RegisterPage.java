@@ -20,10 +20,15 @@ import utils.TestBase;
 
 public class RegisterPage {
 
+	//private WebDriverWait wait;
+	private WebDriver driver;
 	private TestBase testBase;
 
-	public RegisterPage(WebDriver driver) {
-		testBase = new TestBase(driver);
+
+	public RegisterPage() {
+		driver = utils.DriverManager.getDriver();
+		//this.wait = new WebDriverWait(utils.DriverManager.getDriver(), Duration.ofSeconds(10));
+		testBase = new TestBase();
 		PageFactory.initElements(driver, this);
 	}
 	// ------------------------------
@@ -231,7 +236,6 @@ public class RegisterPage {
 	    WebElement emailInput = utils.DriverManager.getDriver().findElement(By.id("input-email"));
 	    String validationMessage = (String) ((JavascriptExecutor) utils.DriverManager.getDriver())
 	        .executeScript("return arguments[0].validationMessage;", emailInput);
-	    System.out.println("Validation message: " + validationMessage);
 	    return validationMessage.contains("Please include an '@'");
 	}
 	

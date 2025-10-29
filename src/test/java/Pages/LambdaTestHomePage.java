@@ -9,6 +9,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
 
+import utils.DriverManager;
 import utils.TestBase;
 
 public class LambdaTestHomePage {
@@ -16,13 +17,11 @@ public class LambdaTestHomePage {
 	private WebDriver driver;
 	private WebDriverWait wait;
 	private Actions actions;
-	private TestBase testBase;
 
-	public LambdaTestHomePage(WebDriver driver) {
-		this.driver = driver;
+	public LambdaTestHomePage() {
+		driver = DriverManager.getDriver();
 		this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		this.actions = new Actions(driver);
-		this.testBase = new TestBase(driver);
 		PageFactory.initElements(driver, this);
 	}
 
@@ -45,7 +44,7 @@ public class LambdaTestHomePage {
 	@FindBy(xpath = "//*[@class='lazy-load' and @alt='iMac']")
 	private WebElement imacImage;
 
-	public void clickMyAccountMenu() {
+	public void hoverOverMyAccountMenu() {
 		wait.until(ExpectedConditions.elementToBeClickable(myAccount));
 		actions.moveToElement(myAccount).perform();
 	}
