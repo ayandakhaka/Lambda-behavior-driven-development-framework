@@ -21,11 +21,15 @@ Feature: Login User Functionality
     Then User should see an error message indicating incorrect password
     
   Scenario: Login with Unregistered Email
-  	And User is logged out
-    And User clicks on the Login link
-    When User enters an unregistered email and any password
+    #And User is logged out
+    When User clicks on the Login link
+    And User enters an unregistered email and any password
     And User clicks on the Login button
-    Then User should see an error message indicating that the email is not registered
+    Then User should see an error message indicating unregistered email
+    
+  
+    
+    
     
 
  

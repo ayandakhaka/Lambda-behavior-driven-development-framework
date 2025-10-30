@@ -1,5 +1,7 @@
 package utils;
 
+import java.io.File;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -13,6 +15,8 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 public class DriverManager {
 
     private static WebDriver driver;
+	// Path to the local driver folder inside your project
+    private static final String DRIVER_PATH = System.getProperty("user.dir") + File.separator + "drivers";
 
     public static WebDriver getDriver() {
         if (driver == null) {
@@ -22,13 +26,18 @@ public class DriverManager {
     }
 
     public static void initializeDriver() {
-        String browser = System.getProperty("browser", "chrome-headless").toLowerCase();
+    	
+    	if(driver != null) {
+    		return; // Driver is already initialized)
+    	}
+    	
+        String browser = ConfigReader.get("browser").toLowerCase();
 
         try {
             switch (browser) {
                 case "chrome":
                 case "chrome-headless":
-                    WebDriverManager.chromedriver().setup();
+                    System.setProperty("webdriver.chrome.driver", DRIVER_PATH + File.separator + "chromedriver.exe");
                     ChromeOptions chromeOptions = new ChromeOptions();
                     if (browser.equals("chrome-headless")) {
                         chromeOptions.addArguments("--headless=new");
@@ -41,7 +50,7 @@ public class DriverManager {
 
                 case "firefox":
                 case "firefox-headless":
-                    WebDriverManager.firefoxdriver().setup();
+                    System.setProperty("webdriver.gecko.driver", DRIVER_PATH + File.separator + "geckodriver.exe");
                     FirefoxOptions firefoxOptions = new FirefoxOptions();
                     if (browser.equals("firefox-headless")) {
                         firefoxOptions.addArguments("--headless");
@@ -52,10 +61,13 @@ public class DriverManager {
 
                 case "edge":
                 case "edge-headless":
-                    WebDriverManager.edgedriver().clearResolutionCache().setup();
+                    System.setProperty("webdriver.edge.driver", DRIVER_PATH + File.separator + "msedgedriver.exe");
                     EdgeOptions edgeOptions = new EdgeOptions();
-                    if (browser.equals("headless")) {
-                        edgeOptions.addArguments("--headless=new", "--no-sandbox", "--disable-dev-shm-usage");
+                    if (browser.equals("edge-headless")) {
+                        edgeOptions.addArguments("--headless=new");
+                        edgeOptions.addArguments("--no-sandbox");
+                        edgeOptions.addArguments("--disable-dev-shm-usage");
+                        edgeOptions.addArguments("--window-size=1920,1080");
                     }
                     driver = new EdgeDriver(edgeOptions);
                     break;

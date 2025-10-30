@@ -5,6 +5,7 @@ import io.cucumber.java.After;
 import io.cucumber.java.BeforeAll;
 import io.cucumber.java.AfterAll;
 import io.cucumber.java.Scenario;
+import utils.DriverManager;
 import utils.ExtentManager;
 
 public class Hooks {
@@ -34,5 +35,6 @@ public class Hooks {
     public static void tearDown() {
         System.out.println("🧾 Flushing Extent Report...");
         ExtentManager.flush(); // 🔥 Writes ExtentReport.html
+        DriverManager.quitDriver(); // 🚪 Quit WebDriver
     }
 }
