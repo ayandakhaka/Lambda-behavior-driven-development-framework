@@ -15,7 +15,6 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 public class DriverManager {
 
     private static WebDriver driver;
-	// Path to the local driver folder inside your project
     private static final String DRIVER_PATH = System.getProperty("user.dir") + File.separator + "drivers";
 
     public static WebDriver getDriver() {
@@ -26,49 +25,48 @@ public class DriverManager {
     }
 
     public static void initializeDriver() {
-    	
-    	if(driver != null) {
-    		return; // Driver is already initialized)
-    	}
-    	
+        if (driver != null) return;
+        
         String browser = ConfigReader.get("browser").toLowerCase();
+        boolean isCI = Boolean.parseBoolean(System.getenv("CI")); // true in GitHub Actions
 
         try {
             switch (browser) {
                 case "chrome":
                 case "chrome-headless":
-                    System.setProperty("webdriver.chrome.driver", DRIVER_PATH + File.separator + "chromedriver.exe");
                     ChromeOptions chromeOptions = new ChromeOptions();
-                    if (browser.equals("chrome-headless")) {
+                    if (isCI || browser.equals("chrome-headless")) {
                         chromeOptions.addArguments("--headless=new");
                         chromeOptions.addArguments("--disable-gpu");
                         chromeOptions.addArguments("--no-sandbox");
+                        chromeOptions.addArguments("--disable-dev-shm-usage");
                         chromeOptions.addArguments("--window-size=1920,1080");
                     }
+                    WebDriverManager.chromedriver().setup();
                     driver = new ChromeDriver(chromeOptions);
                     break;
 
                 case "firefox":
                 case "firefox-headless":
-                    System.setProperty("webdriver.gecko.driver", DRIVER_PATH + File.separator + "geckodriver.exe");
                     FirefoxOptions firefoxOptions = new FirefoxOptions();
-                    if (browser.equals("firefox-headless")) {
+                    if (isCI || browser.equals("firefox-headless")) {
                         firefoxOptions.addArguments("--headless");
                         firefoxOptions.addArguments("--window-size=1920,1080");
                     }
+                    WebDriverManager.firefoxdriver().setup();
                     driver = new FirefoxDriver(firefoxOptions);
                     break;
 
                 case "edge":
                 case "edge-headless":
-                    System.setProperty("webdriver.edge.driver", DRIVER_PATH + File.separator + "msedgedriver.exe");
                     EdgeOptions edgeOptions = new EdgeOptions();
-                    if (browser.equals("edge-headless")) {
+                    if (isCI || browser.equals("edge-headless")) {
                         edgeOptions.addArguments("--headless=new");
                         edgeOptions.addArguments("--no-sandbox");
                         edgeOptions.addArguments("--disable-dev-shm-usage");
                         edgeOptions.addArguments("--window-size=1920,1080");
                     }
+                    WebDriverManager.edgedriver().setup();
                     driver = new EdgeDriver(edgeOptions);
                     break;
 
@@ -76,7 +74,9 @@ public class DriverManager {
                     throw new RuntimeException("Unsupported browser: " + browser);
             }
 
-            driver.manage().window().maximize();
+            if (!isCI) {
+                driver.manage().window().maximize(); // maximize only locally
+            }
 
         } catch (Exception e) {
             throw new RuntimeException("Failed to initialize WebDriver: " + e.getMessage(), e);
@@ -91,10 +91,6 @@ public class DriverManager {
     }
 
     public static void launchURL(String url) {
-        try {
-            getDriver().get(url);
-        } catch (Exception e) {
-            throw new RuntimeException("Failed to launch URL: " + url, e);
-        }
+        getDriver().get(url);
     }
 }

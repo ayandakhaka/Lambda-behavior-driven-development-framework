@@ -56,7 +56,7 @@ public class LoginSteps {
         // Initialize WebDriver
         DriverManager.initializeDriver();
 
-        // Load test data from data source (JSON, properties, or static)
+        // Load test data from data source (JSON)
         userData = TestDataManager.getInstance();
         userData.loadUserData();
 
