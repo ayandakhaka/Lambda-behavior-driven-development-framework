@@ -1,40 +1,42 @@
 package hooks;
 
-import io.cucumber.java.Before;
-import io.cucumber.java.After;
-import io.cucumber.java.BeforeAll;
-import io.cucumber.java.AfterAll;
-import io.cucumber.java.Scenario;
+import io.cucumber.java.*;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import utils.DriverManager;
 import utils.ExtentManager;
 
 public class Hooks {
 
+    private static final Logger logger = LoggerFactory.getLogger(Hooks.class);
+
     @BeforeAll
     public static void setupReport() {
-        System.out.println("🟢 Initializing Extent Report...");
-        ExtentManager.getInstance(); // Initialize Extent report
+        logger.info("🟢 Initializing Extent Report...");
+        ExtentManager.getInstance();
     }
 
     @Before
     public void beforeScenario(Scenario scenario) {
-        System.out.println("🧩 Starting Scenario: " + scenario.getName());
+        logger.info("🧩 Starting Scenario: {}", scenario.getName());
         ExtentManager.createTest(scenario.getName());
     }
 
     @After
     public void afterScenario(Scenario scenario) {
         if (scenario.isFailed()) {
+            logger.error("❌ Scenario failed: {}", scenario.getName());
             ExtentManager.getTest().fail("❌ Scenario failed: " + scenario.getName());
         } else {
+            logger.info("✅ Scenario passed: {}", scenario.getName());
             ExtentManager.getTest().pass("✅ Scenario passed: " + scenario.getName());
         }
     }
 
     @AfterAll
     public static void tearDown() {
-        System.out.println("🧾 Flushing Extent Report...");
-        ExtentManager.flush(); // 🔥 Writes ExtentReport.html
-        DriverManager.quitDriver(); // 🚪 Quit WebDriver
+        logger.info("🧾 Flushing Extent Report and quitting WebDriver...");
+        ExtentManager.flush();
+        DriverManager.quitDriver();
     }
 }
