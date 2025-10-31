@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+  <meta charset='utf-8'>
+  <title>TestNG reports</title>
+
+    <link type="text/css" href="testng-reports1.css" rel="stylesheet" id="ultra" />
+    <link type="text/css" href="testng-reports.css" rel="stylesheet" id="retro" disabled="false"/>
+    <script type="text/javascript" src="jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="testng-reports.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type='text/javascript'>
+      google.load('visualization', '1', {packages:['table']});
+      google.setOnLoadCallback(drawTable);
+      var suiteTableInitFunctions = new Array();
+      var suiteTableData = new Array();
+    </script>
+    <!--
+      <script type="text/javascript" src="jquery-ui/js/jquery-ui-1.8.16.custom.min.js"></script>
+     -->
+  </head>
+
+  <body>    <div class="top-banner-root">
+      <span class="top-banner-title-font">Test results</span>
+      <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
+      <br/>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+    </div> <!-- top-banner-root -->
+    <div class="navigator-root">
+      <div class="navigator-suite-header">
+        <span>All suites</span>
+        <a href="#" title="Collapse/expand all the suites" class="collapse-all-link">
+          <img src="collapseall.gif" class="collapse-all-icon">
+          </img> <!-- collapse-all-icon -->
+        </a> <!-- collapse-all-link -->
+      </div> <!-- navigator-suite-header -->
+      <div class="suite">
+        <div class="rounded-window">
+          <div class="suite-header light-rounded-window-top">
+            <a href="#" panel-name="suite-Cucumber_BDD_Suite" class="navigator-link">
+              <span class="suite-name border-failed">Cucumber BDD Suite</span>
+            </a> <!-- navigator-link -->
+          </div> <!-- suite-header light-rounded-window-top -->
+          <div class="navigator-suite-content">
+            <div class="suite-section-title">
+              <span>Info</span>
+            </div> <!-- suite-section-title -->
+            <div class="suite-section-content">
+              <ul>
+                <li>
+                  <a href="#" panel-name="test-xml-Cucumber_BDD_Suite" class="navigator-link ">
+                    <span>C:\Users\USER\eclipse-workspace\Lambda-behavior-driven-development-framework\testng.xml</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="testlist-Cucumber_BDD_Suite" class="navigator-link ">
+                    <span class="test-stats">1 test</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="group-Cucumber_BDD_Suite" class="navigator-link ">
+                    <span>1 group</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="times-Cucumber_BDD_Suite" class="navigator-link ">
+                    <span>Times</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="reporter-Cucumber_BDD_Suite" class="navigator-link ">
+                    <span>Reporter output</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="ignored-methods-Cucumber_BDD_Suite" class="navigator-link ">
+                    <span>Ignored methods</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="chronological-Cucumber_BDD_Suite" class="navigator-link ">
+                    <span>Chronological view</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+              </ul>
+            </div> <!-- suite-section-content -->
+            <div class="result-section">
+              <div class="suite-section-title">
+                <span>Results</span>
+              </div> <!-- suite-section-title -->
+              <div class="suite-section-content">
+                <ul>
+                  <li>
+                    <span class="method-stats">10 methods, 1 failed,   9 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Cucumber_BDD_Suite" class="hide-methods failed suite-Cucumber_BDD_Suite"> (hide)</a> <!-- hide-methods failed suite-Cucumber_BDD_Suite -->
+                      <a href="#" panel-name="suite-Cucumber_BDD_Suite" class="show-methods failed suite-Cucumber_BDD_Suite"> (show)</a> <!-- show-methods failed suite-Cucumber_BDD_Suite -->
+                    </span>
+                    <div class="method-list-content failed suite-Cucumber_BDD_Suite">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Cucumber_BDD_Suite" title="testrunner.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Successful Login with Valid Credentials&quot;, &quot;Login User Functionality&quot;)">runScenario("Successful Login with Valid Credentials", "Login User Functionality")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Cucumber_BDD_Suite -->
+                  </li>
+                  <li>
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-Cucumber_BDD_Suite" class="hide-methods passed suite-Cucumber_BDD_Suite"> (hide)</a> <!-- hide-methods passed suite-Cucumber_BDD_Suite -->
+                      <a href="#" panel-name="suite-Cucumber_BDD_Suite" class="show-methods passed suite-Cucumber_BDD_Suite"> (show)</a> <!-- show-methods passed suite-Cucumber_BDD_Suite -->
+                    </span>
+                    <div class="method-list-content passed suite-Cucumber_BDD_Suite">
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Cucumber_BDD_Suite" title="testrunner.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Registration with Invalid Email Format&quot;, &quot;Register User Functionality&quot;)">runScenario("Registration with Invalid Email Format", "Register User Functionality")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Cucumber_BDD_Suite" title="testrunner.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Registration with Already Registered Email&quot;, &quot;Register User Functionality&quot;)">runScenario("Registration with Already Registered Email", "Register User Functionality")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Cucumber_BDD_Suite" title="testrunner.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Registration with Missing Mandatory Fields&quot;, &quot;Register User Functionality&quot;)">runScenario("Registration with Missing Mandatory Fields", "Register User Functionality")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Cucumber_BDD_Suite" title="testrunner.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Registration without Accepting Privacy Policy&quot;, &quot;Register User Functionality&quot;)">runScenario("Registration without Accepting Privacy Policy", "Register User Functionality")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Cucumber_BDD_Suite" title="testrunner.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Registration with Weak Password&quot;, &quot;Register User Functionality&quot;)">runScenario("Registration with Weak Password", "Register User Functionality")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Cucumber_BDD_Suite" title="testrunner.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Successful Registration with Valid Details&quot;, &quot;Register User Functionality&quot;)">runScenario("Successful Registration with Valid Details", "Register User Functionality")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Cucumber_BDD_Suite" title="testrunner.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Login with Unregistered Email&quot;, &quot;Login User Functionality&quot;)">runScenario("Login with Unregistered Email", "Login User Functionality")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Cucumber_BDD_Suite" title="testrunner.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Login with Invalid Password&quot;, &quot;Login User Functionality&quot;)">runScenario("Login with Invalid Password", "Login User Functionality")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Cucumber_BDD_Suite" title="testrunner.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Registration with Mismatched Password Confirmation&quot;, &quot;Register User Functionality&quot;)">runScenario("Registration with Mismatched Password Confirmation", "Register User Functionality")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content passed suite-Cucumber_BDD_Suite -->
+                  </li>
+                </ul>
+              </div> <!-- suite-section-content -->
+            </div> <!-- result-section -->
+          </div> <!-- navigator-suite-content -->
+        </div> <!-- rounded-window -->
+      </div> <!-- suite -->
+    </div> <!-- navigator-root -->
+    <div class="wrapper">
+      <div class="main-panel-root">
+        <div panel-name="suite-Cucumber_BDD_Suite" class="panel Cucumber_BDD_Suite">
+          <div class="suite-Cucumber_BDD_Suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">testrunner.TestRunner</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Successful Login with Valid Credentials&quot;, &quot;Login User Functionality&quot;)">
+                  </a> <!-- runScenario("Successful Login with Valid Credentials", "Login User Functionality") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Successful Login with Valid Credentials","Login User Functionality")</span>
+                  <div class="stack-trace">org.openqa.selenium.TimeoutException: java.net.http.HttpConnectTimeoutException: HTTP connect timed out
+Build info: version: &apos;4.25.0&apos;, revision: &apos;8a8aea2337&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.8&apos;
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Command: [66544ed6ee9923fc124bf05314be93e7b18c1ea3, isElementDisplayed {id=f.A21DB90A643F8D571680A093D5EE72C5.d.390FCEE1C13676F50F43C04E2CEC8758.e.59}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 141.0.7390.55, chrome: {chromedriverVersion: 141.0.7390.54 (b95610d5c4a5..., userDataDir: C:\Windows\proxy\scoped_dir...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:2704}, goog:loggingPrefs: {browser: SEVERE, driver: ALL, performance: ALL, server: ALL}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: Windows XP, proxy: Proxy(), se:bidiEnabled: false, se:cdpVersion: 141.0.7390.55, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[RemoteWebDriver: chrome on Windows XP (66544ed6ee9923fc124bf05314be93e7b18c1ea3)] -&gt; css selector: input[name=&apos;password&apos;]]
+Session ID: 66544ed6ee9923fc124bf05314be93e7b18c1ea3
+	at org.openqa.selenium.remote.http.jdk.JdkHttpClient.execute0(JdkHttpClient.java:408)
+	at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
+	at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:55)
+	at org.openqa.selenium.remote.http.jdk.JdkHttpClient.execute(JdkHttpClient.java:374)
+	at org.openqa.selenium.remote.tracing.TracedHttpClient.execute(TracedHttpClient.java:54)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:187)
+	at org.openqa.selenium.remote.TracedCommandExecutor.execute(TracedCommandExecutor.java:53)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.isDisplayed(RemoteWebElement.java:282)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at jdk.proxy2/jdk.proxy2.$Proxy28.isDisplayed(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
+	at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:656)
+	at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:652)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
+	at utils.TestBase.sendKeys(TestBase.java:116)
+	at Pages.LoginPage.enterPassword(LoginPage.java:98)
+	at stepdefinition.LoginSteps.user_enters_valid_email_and_password(LoginSteps.java:90)
+	at ✽.User enters valid email and password(file:///C:/Users/USER/eclipse-workspace/Lambda-behavior-driven-development-framework/src/test/resources/features/LoginUser.feature:12)
+Caused by: java.net.http.HttpConnectTimeoutException: HTTP connect timed out
+	at java.net.http/jdk.internal.net.http.MultiExchange.toTimeoutException(MultiExchange.java:611)
+	at java.net.http/jdk.internal.net.http.MultiExchange.getExceptionalCF(MultiExchange.java:555)
+	at java.net.http/jdk.internal.net.http.MultiExchange.lambda$responseAsyncImpl$7(MultiExchange.java:474)
+	at java.base/java.util.concurrent.CompletableFuture.uniHandle(CompletableFuture.java:934)
+	at java.base/java.util.concurrent.CompletableFuture$UniHandle.tryFire(CompletableFuture.java:911)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510)
+	at java.base/java.util.concurrent.CompletableFuture.completeExceptionally(CompletableFuture.java:2194)
+	at java.net.http/jdk.internal.net.http.Http1Exchange.lambda$cancelImpl$9(Http1Exchange.java:592)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: java.net.ConnectException: HTTP connect timed out
+	at java.net.http/jdk.internal.net.http.MultiExchange.toTimeoutException(MultiExchange.java:612)
+	... 10 more
+... Removed 2 stack frames
+</div> <!-- stack-trace -->
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Cucumber_BDD_Suite-class-failed -->
+          <div class="suite-Cucumber_BDD_Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">testrunner.TestRunner</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Registration with Invalid Email Format&quot;, &quot;Register User Functionality&quot;)">
+                  </a> <!-- runScenario("Registration with Invalid Email Format", "Register User Functionality") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Registration with Invalid Email Format","Register User Functionality")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Registration with Already Registered Email&quot;, &quot;Register User Functionality&quot;)">
+                  </a> <!-- runScenario("Registration with Already Registered Email", "Register User Functionality") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Registration with Already Registered Email","Register User Functionality")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Registration with Missing Mandatory Fields&quot;, &quot;Register User Functionality&quot;)">
+                  </a> <!-- runScenario("Registration with Missing Mandatory Fields", "Register User Functionality") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Registration with Missing Mandatory Fields","Register User Functionality")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Registration without Accepting Privacy Policy&quot;, &quot;Register User Functionality&quot;)">
+                  </a> <!-- runScenario("Registration without Accepting Privacy Policy", "Register User Functionality") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Registration without Accepting Privacy Policy","Register User Functionality")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Registration with Weak Password&quot;, &quot;Register User Functionality&quot;)">
+                  </a> <!-- runScenario("Registration with Weak Password", "Register User Functionality") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Registration with Weak Password","Register User Functionality")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Successful Registration with Valid Details&quot;, &quot;Register User Functionality&quot;)">
+                  </a> <!-- runScenario("Successful Registration with Valid Details", "Register User Functionality") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Successful Registration with Valid Details","Register User Functionality")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Login with Unregistered Email&quot;, &quot;Login User Functionality&quot;)">
+                  </a> <!-- runScenario("Login with Unregistered Email", "Login User Functionality") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Login with Unregistered Email","Login User Functionality")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Login with Invalid Password&quot;, &quot;Login User Functionality&quot;)">
+                  </a> <!-- runScenario("Login with Invalid Password", "Login User Functionality") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Login with Invalid Password","Login User Functionality")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Registration with Mismatched Password Confirmation&quot;, &quot;Register User Functionality&quot;)">
+                  </a> <!-- runScenario("Registration with Mismatched Password Confirmation", "Register User Functionality") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Registration with Mismatched Password Confirmation","Register User Functionality")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Cucumber_BDD_Suite-class-passed -->
+        </div> <!-- panel Cucumber_BDD_Suite -->
+        <div panel-name="test-xml-Cucumber_BDD_Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">C:\Users\USER\eclipse-workspace\Lambda-behavior-driven-development-framework\testng.xml</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <pre>
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
+&lt;suite name=&quot;Cucumber BDD Suite&quot; guice-stage=&quot;DEVELOPMENT&quot; verbose=&quot;0&quot;&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;Cucumber Tests&quot; verbose=&quot;0&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;testrunner.TestRunner&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Cucumber Tests --&gt;
+&lt;/suite&gt; &lt;!-- Cucumber BDD Suite --&gt;
+            </pre>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="testlist-Cucumber_BDD_Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Tests for Cucumber BDD Suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <ul>
+              <li>
+                <span class="test-name">Cucumber Tests (1 class)</span>
+              </li>
+            </ul>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="group-Cucumber_BDD_Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Groups for Cucumber BDD Suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="test-group">
+              <span class="test-group-name">cucumber</span>
+              <br/>
+              <div class="method-in-group">
+                <span class="method-in-group-name">runScenario</span>
+                <br/>
+              </div> <!-- method-in-group -->
+            </div> <!-- test-group -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="times-Cucumber_BDD_Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Times for Cucumber BDD Suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="times-div">
+              <script type="text/javascript">
+suiteTableInitFunctions.push('tableData_Cucumber_BDD_Suite');
+function tableData_Cucumber_BDD_Suite() {
+var data = new google.visualization.DataTable();
+data.addColumn('number', 'Number');
+data.addColumn('string', 'Method');
+data.addColumn('string', 'Class');
+data.addColumn('number', 'Time (ms)');
+data.addRows(10);
+data.setCell(0, 0, 0)
+data.setCell(0, 1, 'runScenario')
+data.setCell(0, 2, 'testrunner.TestRunner')
+data.setCell(0, 3, 174242);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'runScenario')
+data.setCell(1, 2, 'testrunner.TestRunner')
+data.setCell(1, 3, 147231);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'runScenario')
+data.setCell(2, 2, 'testrunner.TestRunner')
+data.setCell(2, 3, 143493);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'runScenario')
+data.setCell(3, 2, 'testrunner.TestRunner')
+data.setCell(3, 3, 135067);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'runScenario')
+data.setCell(4, 2, 'testrunner.TestRunner')
+data.setCell(4, 3, 115937);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'runScenario')
+data.setCell(5, 2, 'testrunner.TestRunner')
+data.setCell(5, 3, 114839);
+data.setCell(6, 0, 6)
+data.setCell(6, 1, 'runScenario')
+data.setCell(6, 2, 'testrunner.TestRunner')
+data.setCell(6, 3, 111961);
+data.setCell(7, 0, 7)
+data.setCell(7, 1, 'runScenario')
+data.setCell(7, 2, 'testrunner.TestRunner')
+data.setCell(7, 3, 81676);
+data.setCell(8, 0, 8)
+data.setCell(8, 1, 'runScenario')
+data.setCell(8, 2, 'testrunner.TestRunner')
+data.setCell(8, 3, 77979);
+data.setCell(9, 0, 9)
+data.setCell(9, 1, 'runScenario')
+data.setCell(9, 2, 'testrunner.TestRunner')
+data.setCell(9, 3, 77257);
+window.suiteTableData['Cucumber_BDD_Suite']= { tableData: data, tableDiv: 'times-div-Cucumber_BDD_Suite'}
+return data;
+}
+              </script>
+              <span class="suite-total-time">Total running time: 19 minutes</span>
+              <div id="times-div-Cucumber_BDD_Suite">
+              </div> <!-- times-div-Cucumber_BDD_Suite -->
+            </div> <!-- times-div -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="reporter-Cucumber_BDD_Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Reporter output for Cucumber BDD Suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="ignored-methods-Cucumber_BDD_Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">0 ignored methods</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="chronological-Cucumber_BDD_Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Methods in chronological order</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="chronological-class">
+              <div class="chronological-class-name">testrunner.TestRunner</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setUpClass(org.testng.TestRunner@6375af2a)</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">runScenario("Successful Login with Valid Credentials", "Login User Functionality")</span>
+                <span class="method-start">4932 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("Login with Invalid Password", "Login User Functionality")</span>
+                <span class="method-start">86946 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("Login with Unregistered Email", "Login User Functionality")</span>
+                <span class="method-start">164931 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("Successful Registration with Valid Details", "Register User Functionality")</span>
+                <span class="method-start">242188 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("Registration with Already Registered Email", "Register User Functionality")</span>
+                <span class="method-start">416436 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("Registration with Missing Mandatory Fields", "Register User Functionality")</span>
+                <span class="method-start">551503 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("Registration with Invalid Email Format", "Register User Functionality")</span>
+                <span class="method-start">663464 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("Registration without Accepting Privacy Policy", "Register User Functionality")</span>
+                <span class="method-start">810695 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("Registration with Weak Password", "Register User Functionality")</span>
+                <span class="method-start">925534 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("Registration with Mismatched Password Confirmation", "Register User Functionality")</span>
+                <span class="method-start">1069027 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">tearDownClass</span>
+                <span class="method-start">1184964 ms</span>
+              </div> <!-- configuration-class after -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+      </div> <!-- main-panel-root -->
+    </div> <!-- wrapper -->
+  </body>
+<script type="text/javascript" src="testng-reports2.js"></script>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "https://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="https://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+<title>TestNG Report</title>
+<style type="text/css">table {margin-bottom:10px;border-collapse:collapse;empty-cells:show}th,td {border:1px solid #009;padding:.25em .5em}th {vertical-align:bottom}td {vertical-align:top}table a {font-weight:bold}.stripe td {background-color: #E6EBF9}.num {text-align:right}.passedodd td {background-color: #3F3}.passedeven td {background-color: #0A0}.skippedodd td {background-color: #DDD}.skippedeven td {background-color: #CCC}.failedodd td,.attn {background-color: #F33}.failedeven td,.stripe .attn {background-color: #D00}.stacktrace {white-space:pre;font-family:monospace}.totop {font-size:85%;text-align:center;border-bottom:2px solid #000}.invisible {display:none}</style>
+</head>
+<body>
+<table>
+<tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
+<tr><th colspan="8">Cucumber BDD Suite</th></tr>
+<tr><td><a href="#t0">Cucumber Tests</a></td><td class="num">9</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">1,188,084</td><td></td><td></td></tr>
+</table>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Cucumber BDD Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Cucumber Tests &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">testrunner.TestRunner</td><td><a href="#m0">runScenario</a></td><td rowspan="1">1761920344019</td><td rowspan="1">81676</td></tr><tr><th colspan="4">Cucumber Tests &#8212; passed</th></tr><tr class="passedeven"><td rowspan="9">testrunner.TestRunner</td><td><a href="#m1">runScenario</a></td><td rowspan="9">1761921002551</td><td rowspan="9">147231</td></tr><tr class="passedeven"><td><a href="#m2">runScenario</a></td></tr><tr class="passedeven"><td><a href="#m3">runScenario</a></td></tr><tr class="passedeven"><td><a href="#m4">runScenario</a></td></tr><tr class="passedeven"><td><a href="#m5">runScenario</a></td></tr><tr class="passedeven"><td><a href="#m6">runScenario</a></td></tr><tr class="passedeven"><td><a href="#m7">runScenario</a></td></tr><tr class="passedeven"><td><a href="#m8">runScenario</a></td></tr><tr class="passedeven"><td><a href="#m9">runScenario</a></td></tr></tbody>
+</table>
+<h2>Cucumber Tests</h2><h3 id="m0">testrunner.TestRunner#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;Successful Login with Valid Credentials&quot;</td><td>&quot;Login User Functionality&quot;</td></tr><tr><th colspan="2">Exception</th></tr><tr><td colspan="2"><div class="stacktrace">org.openqa.selenium.TimeoutException: java.net.http.HttpConnectTimeoutException: HTTP connect timed out
+Build info: version: &apos;4.25.0&apos;, revision: &apos;8a8aea2337&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.8&apos;
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Command: [66544ed6ee9923fc124bf05314be93e7b18c1ea3, isElementDisplayed {id=f.A21DB90A643F8D571680A093D5EE72C5.d.390FCEE1C13676F50F43C04E2CEC8758.e.59}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 141.0.7390.55, chrome: {chromedriverVersion: 141.0.7390.54 (b95610d5c4a5..., userDataDir: C:\Windows\proxy\scoped_dir...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:2704}, goog:loggingPrefs: {browser: SEVERE, driver: ALL, performance: ALL, server: ALL}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: Windows XP, proxy: Proxy(), se:bidiEnabled: false, se:cdpVersion: 141.0.7390.55, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[RemoteWebDriver: chrome on Windows XP (66544ed6ee9923fc124bf05314be93e7b18c1ea3)] -&gt; css selector: input[name=&apos;password&apos;]]
+Session ID: 66544ed6ee9923fc124bf05314be93e7b18c1ea3
+	at org.openqa.selenium.remote.http.jdk.JdkHttpClient.execute0(JdkHttpClient.java:408)
+	at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
+	at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:55)
+	at org.openqa.selenium.remote.http.jdk.JdkHttpClient.execute(JdkHttpClient.java:374)
+	at org.openqa.selenium.remote.tracing.TracedHttpClient.execute(TracedHttpClient.java:54)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:187)
+	at org.openqa.selenium.remote.TracedCommandExecutor.execute(TracedCommandExecutor.java:53)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.isDisplayed(RemoteWebElement.java:282)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at jdk.proxy2/jdk.proxy2.$Proxy28.isDisplayed(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
+	at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:656)
+	at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:652)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
+	at utils.TestBase.sendKeys(TestBase.java:116)
+	at Pages.LoginPage.enterPassword(LoginPage.java:98)
+	at stepdefinition.LoginSteps.user_enters_valid_email_and_password(LoginSteps.java:90)
+	at ✽.User enters valid email and password(file:///C:/Users/USER/eclipse-workspace/Lambda-behavior-driven-development-framework/src/test/resources/features/LoginUser.feature:12)
+Caused by: java.net.http.HttpConnectTimeoutException: HTTP connect timed out
+	at java.net.http/jdk.internal.net.http.MultiExchange.toTimeoutException(MultiExchange.java:611)
+	at java.net.http/jdk.internal.net.http.MultiExchange.getExceptionalCF(MultiExchange.java:555)
+	at java.net.http/jdk.internal.net.http.MultiExchange.lambda$responseAsyncImpl$7(MultiExchange.java:474)
+	at java.base/java.util.concurrent.CompletableFuture.uniHandle(CompletableFuture.java:934)
+	at java.base/java.util.concurrent.CompletableFuture$UniHandle.tryFire(CompletableFuture.java:911)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510)
+	at java.base/java.util.concurrent.CompletableFuture.completeExceptionally(CompletableFuture.java:2194)
+	at java.net.http/jdk.internal.net.http.Http1Exchange.lambda$cancelImpl$9(Http1Exchange.java:592)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: java.net.ConnectException: HTTP connect timed out
+	at java.net.http/jdk.internal.net.http.MultiExchange.toTimeoutException(MultiExchange.java:612)
+	... 10 more
+... Removed 2 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">testrunner.TestRunner#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;Registration with Invalid Email Format&quot;</td><td>&quot;Register User Functionality&quot;</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">testrunner.TestRunner#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;Registration with Already Registered Email&quot;</td><td>&quot;Register User Functionality&quot;</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">testrunner.TestRunner#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;Registration with Missing Mandatory Fields&quot;</td><td>&quot;Register User Functionality&quot;</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m4">testrunner.TestRunner#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;Registration without Accepting Privacy Policy&quot;</td><td>&quot;Register User Functionality&quot;</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m5">testrunner.TestRunner#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;Registration with Weak Password&quot;</td><td>&quot;Register User Functionality&quot;</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m6">testrunner.TestRunner#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;Successful Registration with Valid Details&quot;</td><td>&quot;Register User Functionality&quot;</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m7">testrunner.TestRunner#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;Login with Unregistered Email&quot;</td><td>&quot;Login User Functionality&quot;</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m8">testrunner.TestRunner#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;Login with Invalid Password&quot;</td><td>&quot;Login User Functionality&quot;</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m9">testrunner.TestRunner#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;Registration with Mismatched Password Confirmation&quot;</td><td>&quot;Register User Functionality&quot;</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+</body>
+</html>

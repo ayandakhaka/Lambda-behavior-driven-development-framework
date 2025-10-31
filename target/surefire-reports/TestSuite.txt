@@ -1,0 +1,54 @@
+-------------------------------------------------------------------------------
+Test set: TestSuite
+-------------------------------------------------------------------------------
+Tests run: 10, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 1194 s <<< FAILURE! -- in TestSuite
+testrunner.TestRunner.runScenario["Successful Login with Valid Credentials", "Login User Functionality"](1) -- Time elapsed: 82.36 s <<< FAILURE!
+org.openqa.selenium.TimeoutException: 
+java.net.http.HttpConnectTimeoutException: HTTP connect timed out
+Build info: version: '4.25.0', revision: '8a8aea2337'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.8'
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Command: [66544ed6ee9923fc124bf05314be93e7b18c1ea3, isElementDisplayed {id=f.A21DB90A643F8D571680A093D5EE72C5.d.390FCEE1C13676F50F43C04E2CEC8758.e.59}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 141.0.7390.55, chrome: {chromedriverVersion: 141.0.7390.54 (b95610d5c4a5..., userDataDir: C:\Windows\proxy\scoped_dir...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:2704}, goog:loggingPrefs: {browser: SEVERE, driver: ALL, performance: ALL, server: ALL}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: Windows XP, proxy: Proxy(), se:bidiEnabled: false, se:cdpVersion: 141.0.7390.55, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[RemoteWebDriver: chrome on Windows XP (66544ed6ee9923fc124bf05314be93e7b18c1ea3)] -> css selector: input[name='password']]
+Session ID: 66544ed6ee9923fc124bf05314be93e7b18c1ea3
+	at org.openqa.selenium.remote.http.jdk.JdkHttpClient.execute0(JdkHttpClient.java:408)
+	at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
+	at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:55)
+	at org.openqa.selenium.remote.http.jdk.JdkHttpClient.execute(JdkHttpClient.java:374)
+	at org.openqa.selenium.remote.tracing.TracedHttpClient.execute(TracedHttpClient.java:54)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:187)
+	at org.openqa.selenium.remote.TracedCommandExecutor.execute(TracedCommandExecutor.java:53)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.isDisplayed(RemoteWebElement.java:282)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at jdk.proxy2/jdk.proxy2.$Proxy28.isDisplayed(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
+	at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:656)
+	at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:652)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
+	at utils.TestBase.sendKeys(TestBase.java:116)
+	at Pages.LoginPage.enterPassword(LoginPage.java:98)
+	at stepdefinition.LoginSteps.user_enters_valid_email_and_password(LoginSteps.java:90)
+	at ✽.User enters valid email and password(file:///C:/Users/USER/eclipse-workspace/Lambda-behavior-driven-development-framework/src/test/resources/features/LoginUser.feature:12)
+Caused by: java.net.http.HttpConnectTimeoutException: HTTP connect timed out
+	at java.net.http/jdk.internal.net.http.MultiExchange.toTimeoutException(MultiExchange.java:611)
+	at java.net.http/jdk.internal.net.http.MultiExchange.getExceptionalCF(MultiExchange.java:555)
+	at java.net.http/jdk.internal.net.http.MultiExchange.lambda$responseAsyncImpl$7(MultiExchange.java:474)
+	at java.base/java.util.concurrent.CompletableFuture.uniHandle(CompletableFuture.java:934)
+	at java.base/java.util.concurrent.CompletableFuture$UniHandle.tryFire(CompletableFuture.java:911)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510)
+	at java.base/java.util.concurrent.CompletableFuture.completeExceptionally(CompletableFuture.java:2194)
+	at java.net.http/jdk.internal.net.http.Http1Exchange.lambda$cancelImpl$9(Http1Exchange.java:592)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: java.net.ConnectException: HTTP connect timed out
+	at java.net.http/jdk.internal.net.http.MultiExchange.toTimeoutException(MultiExchange.java:612)
+	... 10 more
+
