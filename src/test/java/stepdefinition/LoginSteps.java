@@ -77,8 +77,7 @@ public class LoginSteps {
     @When("User clicks on the Login link")
     public void user_clicks_on_the_login_link() {
         lambdaTestHomePage.clickLoginLink();
-        System.out.println(EnvironmentLoader.getEnv("BROWSERSTACK_USERNAME"));
-        System.out.println(EnvironmentLoader.getEnv("BROWSERSTACK_ACCESS_KEY"));
+        System.out.println("Running on BrowserStack as user: " + System.getenv("BROWSERSTACK_USERNAME"));
 
     }
 

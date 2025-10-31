@@ -10,6 +10,14 @@ jobs:
     env:
       CI: true   # Detect CI mode in DriverManager
       MAVEN_OPTS: -Dmaven.test.failure.ignore=false
+      BROWSERSTACK_USERNAME: ${{ secrets.BROWSERSTACK_USERNAME }}
+      BROWSERSTACK_ACCESS_KEY: ${{ secrets.BROWSERSTACK_ACCESS_KEY }}
+      BROWSERSTACK_BUILD_NAME: ${{ secrets.BROWSERSTACK_BUILD_NAME }}
+      BROWSERSTACK_SESSION_NAME: ${{ secrets.BROWSERSTACK_SESSION_NAME }}
+      BROWSERSTACK_BROWSER_NAME: ${{ secrets.BROWSERSTACK_BROWSER_NAME }}
+      BROWSERSTACK_BROWSER_VERSION: ${{ secrets.BROWSERSTACK_BROWSER_VERSION }}
+      BROWSERSTACK_OS: ${{ secrets.BROWSERSTACK_OS }}
+      BROWSERSTACK_OS_VERSION: ${{ secrets.BROWSERSTACK_OS_VERSION }}
 
     steps:
       - name: 📥 Checkout repository
