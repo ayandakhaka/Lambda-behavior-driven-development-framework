@@ -14,6 +14,7 @@
 Thumbs.db
 
 # Ignore build and dependency folders
+/target/
 /build/
 /out/
 
@@ -22,7 +23,6 @@ Thumbs.db
 *.tmp
 *.swp
 test-output/
-extent-report.html
 
 # Ignore drivers
 drivers/
