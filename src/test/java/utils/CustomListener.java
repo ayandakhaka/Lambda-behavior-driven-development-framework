@@ -28,7 +28,7 @@ public class CustomListener implements ITestListener {
 
     @Override
     public void onFinish(ITestContext context) {
-        ExtentManager.flush();
+    	extent.flush();
         System.out.println("📊 Test Execution Finished: " + context.getName());
     }
 

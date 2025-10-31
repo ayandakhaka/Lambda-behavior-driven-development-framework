@@ -1,54 +1,50 @@
 package utils;
 
-import java.io.File;
-
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
-import com.aventstack.extentreports.reporter.configuration.Theme;
+
+import java.util.HashMap;
+import java.util.Map;
 
 public class ExtentManager {
 
     private static ExtentReports extent;
-    private static ExtentTest test;
-    private static ExtentSparkReporter spark;
+    private static ThreadLocal<ExtentTest> test = new ThreadLocal<>();
 
-    // ✅ Initialize the ExtentReports instance
     public static ExtentReports getInstance() {
         if (extent == null) {
-            String reportDir = System.getProperty("user.dir") + "/target/";
-            new File(reportDir).mkdirs(); // Ensure directory exists)
-            String reportPath = reportDir + "ExtentReport.html";
-            spark = new ExtentSparkReporter(reportPath);
-            spark.config().setDocumentTitle("LambdaTest Automation Report");
-            spark.config().setReportName("UI Automation Results");
-            spark.config().setTheme(Theme.STANDARD);
-
-            extent = new ExtentReports();
-            extent.attachReporter(spark);
-
-            extent.setSystemInfo("Tester", "Ayanda Khaka");
-            extent.setSystemInfo("Environment", "QA");
-            extent.setSystemInfo("Browser", "Edge");
+            createInstance();
         }
         return extent;
     }
 
-    // ✅ Create a new test entry
-    public static void createTest(String testName) {
-        test = getInstance().createTest(testName);
+    private static ExtentReports createInstance() {
+        String reportPath = System.getProperty("user.dir") + "/target/extent-report.html";
+        ExtentSparkReporter reporter = new ExtentSparkReporter(reportPath);
+        reporter.config().setDocumentTitle("Automation Report");
+        reporter.config().setReportName("LambdaTest BDD Automation Results");
+
+        extent = new ExtentReports();
+        extent.attachReporter(reporter);
+        return extent;
     }
 
-    // ✅ Return the current test
+    // ✅ Create a new test for the scenario
+    public static void createTest(String name) {
+        ExtentTest extentTest = getInstance().createTest(name);
+        test.set(extentTest);
+    }
+
+    // ✅ Get current test
     public static ExtentTest getTest() {
-        return test;
+        return test.get();
     }
 
-    // ✅ Flush report (write it to disk)
+    // ✅ Flush report
     public static void flush() {
         if (extent != null) {
             extent.flush();
-            System.out.println("📄 Extent Report generated at: target/ExtentReport.html");
         }
     }
 }

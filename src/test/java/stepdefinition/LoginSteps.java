@@ -9,6 +9,7 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import utils.DriverManager;
+import utils.EnvironmentLoader;
 import utils.TestDataManager;
 
 /**
@@ -76,6 +77,9 @@ public class LoginSteps {
     @When("User clicks on the Login link")
     public void user_clicks_on_the_login_link() {
         lambdaTestHomePage.clickLoginLink();
+        System.out.println(EnvironmentLoader.getEnv("BROWSERSTACK_USERNAME"));
+        System.out.println(EnvironmentLoader.getEnv("BROWSERSTACK_ACCESS_KEY"));
+
     }
 
     /**
