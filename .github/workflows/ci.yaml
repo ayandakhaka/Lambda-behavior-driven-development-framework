@@ -14,6 +14,7 @@ jobs:
       - name: 📥 Checkout repo
         uses: actions/checkout@v4
 
+      - name: ⚙️ Install Trivy
         run: |
           sudo apt-get update -y
           sudo apt-get install wget apt-transport-https gnupg lsb-release -y
